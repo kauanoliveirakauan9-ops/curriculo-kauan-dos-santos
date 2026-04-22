@@ -1,0 +1,119 @@
+:root {
+  --verde:#00ff88;
+  --fundo:#020617;
+  --card:#ffffff;
+  --texto:#e2e8f0;
+}
+
+body::before {
+  content:"";
+  position:fixed;
+  width:100%;
+  height:100%;
+  background: radial-gradient(circle, rgba(0,255,136,0.15), transparent);
+  z-index:-1;
+}
+
+
+/* PARTICULAS */
+#particles {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+
+/* MENU */
+nav {
+  position:fixed;
+  width:100%;
+  background:#000;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+}
+
+nav a {
+  color:white;
+  margin-left:20px;
+}
+
+/* HEADER */
+header {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.foto {
+  width:150px;
+  border-radius:50%;
+  box-shadow:0 0 40px var(--verde);
+}
+
+h1 {
+  color:var(--verde);
+  text-shadow:0 0 20px var(--verde);
+}
+
+/* SEÇÕES */
+section {
+  padding:100px 20px;
+  max-width:900px;
+  margin:auto;
+}
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* CARDS */
+.card {
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-8px);
+  box-shadow:0 0 25px var(--verde);
+}
+
+/* LINKS */
+a {
+  color:var(--verde);
+}
+
+/* HABILIDADES */
+.barra {
+  background:#1e293b;
+  height:8px;
+}
+
+.progresso {
+  height:100%;
+  background:var(--verde);
+  width:0;
+  transition:1s;
+}
+
+/* ANIMAÇÃO */
+.fade {
+  opacity:0;
+  transform:translateY(30px);
+}
+
+.show {
+  opacity:1;
+  transform:translateY(0);
+  transition:0.6s;
+}
